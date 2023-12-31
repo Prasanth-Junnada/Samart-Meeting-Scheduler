@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patrix, Bootstrap 5 Landing Page</title>
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/001ce89aaa.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  .intro-section {
+    padding: 4rem 0 0 0;
+    height: 100%;
+    background: linear-gradient(to right, rgba(254, 254, 255, 0.95), rgba(250, 247, 250, 0.95));
+    
+  }
+  
+
+  .rounded-circle-custom {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 7px 9px rgb(25, 24, 24);
+    
+  }
+  
+  
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .custom-card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 8px gray;
+  }
+  
+  .card-img-top {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-radius: 50%;
+  }
+  
+  .card-body {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    color: #c144f2;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .btn-primary {
+    background-color: #b52fec;
+    border-color: #b52fec;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    box-shadow: 0 6px 8px gray;
+  }
+  
+  
+</style>
+<body>
+  <!-- ////////////////////////////////////////////////////////////////////////////////////////
+    START SECTION 1 - THE NAVBAR SECTION  
+    /////////////////////////////////////////////////////////////////////////////////////////////-->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="">
+          <img src="{% static 'images/meetly-logo-zip-file2/png/logo-no-background.png' %}" alt="" width="200px" height="40px">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link " aria-current="page" href="{% url 'dashboard' %}">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'availability' %}">Availability</a></li>
+            <li class="nav-item"><a class="nav-link active" href="{% url 'integrations' %}">Integration</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}">Account</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" href="#contact">contact</a> -->
+            </li>
+          </ul>
+          <a href="{% url 'new_meeting' %}" style="text-decoration: none;">
+            <button type="button" class="rounded-pill btn-rounded">
+              Create
+              <span>
+                <i class="fa-solid fa-plus"></i>
+              </span>
+            </button>
+          </a>
+          {% comment %} <a href="{% url 'user_login' %}">
+            <button class="btn btn-sm btn-dark rounded-circle-custom" style="position: fixed; top: 20px; right: 40px;">
+                Logout
+            </button>
+        </a> {% endcomment %}
+        </div>
+      </div>
+    </nav>
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////
+      START SECTION 2 - THE INTRO SECTION  
+      /////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      
+      
+      <section id="services" class="intro-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class=" mb-1"></div>
+          </div>
+          
+        </div>
+        
+      </section>
+      
+      <div class="container alert alert-info" role="alert">
+        Integrate Meetly with your favorite video conferencing apps to seamlessly schedule and join meetings. Our integrations allow you to leverage the power of leading video conferencing solutions, making your virtual meetings productive and efficient. Easily manage your virtual appointments and collaborate with teams and clients using the tools you already love.
+      </div>
+      <div class="container mt-2">
+        <h1 class="mb-4">Meetly Integrations</h1>
+        <div class="row mb-5">
+          <div class="col-md-4 p-2">
+            <div class="card custom-card">
+              <img src="{% static 'images/l4.png' %}" class="card-img-top m-auto" alt="JioMeet">
+              <div class="card-body">
+                <h5 class="card-title">JioMeet</h5>
+                <p class="card-text">A powerful video conferencing app for virtual meetings is jio meet</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-2">
+            <div class="card custom-card">
+              <img src="{% static 'images/l1.webp' %}" class="card-img-top m-auto" alt="Microsoft Teams">
+              <div class="card-body">
+                <h5 class="card-title">Microsoft Teams</h5>
+                <p class="card-text">Connect, collaborate, and communicate seamlessly with Microsoft Teams.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-2">
+            <div class="card custom-card">
+              <img src="{% static 'images/zoomapp.jpg' %}" class="card-img-top m-auto" alt="Zoom">
+              <div class="card-body">
+                <h5 class="card-title">Zoom</h5>
+                <p class="card-text">Join virtual meetings and webinars with Zoom's reliable platform.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row mb-5">
+          <div class="col-md-4 p-2">
+            <div class="card custom-card">
+              <img src="{% static 'images/googlelogo.avif' %}" class="card-img-top m-auto " alt="Google Meet">
+              <div class="card-body">
+                <h5 class="card-title">Google Meet</h5>
+                <p class="card-text">Connect and collaborate with Google Meet's secure video conferencing.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-2">
+            <div class="card custom-card">
+              <img src="{% static 'images/l3.jpg' %}" class="card-img-top m-auto" alt="Cisco Webex">
+              <div class="card-body">
+                <h5 class="card-title">Cisco Webex</h5>
+                <p class="card-text">Host  meetings and collaborate effortlessly with Webex.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 p-2">
+            <div class="card custom-card">
+              <img src="{% static 'images/skypelogo.png' %}" class="card-img-top m-auto" alt="BlueJeans">
+              <div class="card-body">
+                <h5 class="card-title">Skype</h5>
+                <p class="card-text">Experience high-quality video conferencing with Skype.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Add more rows and cards for other integrations -->
+    </div>
+    <!-- ///////////////////////////////////////////////////////////////////////////////////////////
+      START SECTION 9 - THE FOOTER  
+      ///////////////////////////////////////////////////////////////////////////////////////////////-->
+      
+      <footer class="footer pt-0">
+        
+        
+        
+        
+        <!-- START THE COPYRIGHT INFO  -->
+        <div class="footer-bottom pt-5 pb-5">
+          <div class="container">
+            <div class="row text-center text-white">
+              <div class="col-12">
+                <div class="footer-bottom__copyright">
+                  &COPY; Copyright 2021 <a href="#">Company</a> | Created by <a href="http://codebook.in" target="_blank">codebook</a><br><br>
+                  
+                  <!-- Distributed by <a href="http://themewagon.com" target="_blank">ThemeWagon</a> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- BACK TO TOP BUTTON  -->
+      <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+        <i class="fas fa-chevron-up"></i>
+      </a>
+      
+      
+      
+      
+      <script src="{% static 'assets/vendors/js/glightbox.min.js' %}"></script>
+      
+      <script type="text/javascript">
+        const lightbox = GLightbox({
+          'touchNavigation': true,
+          'href': 'https://www.youtube.com/watch?v=J9lS14nM1xg',
+          'type': 'video',
+          'source': 'youtube', //vimeo, youtube or local
+          'width': 900,
+          'autoPlayVideos': 'true',
+        });
+        
+      </script>
+      <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+{% if messages %}
+    {% for message in messages %}
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <script>swal({
+            title: "Success!",
+            text: "{{message}}",
+            icon: "success",
+            button: "OK",
+        });
+    </script>
+    
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.WARNING %}
+    <script>swal({
+            title: "Warning :)",
+            text: "{{message}}",
+            icon: "warning",
+            button: "OK",
+         
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+    <script>swal({
+            title: "info :)",
+            text: "{{message}}",
+            icon: "info",
+            button: "OK",
+        });
+    </script>
+    {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+    <script>swal({
+            title: "error :)",
+            text: "{{message}}",
+            icon: "error",
+            button: "OK",
+        });
+    </script>
+    {% endif %}
+    {% endfor %}
+  {% endif %}
+    </body>
+    </html>
