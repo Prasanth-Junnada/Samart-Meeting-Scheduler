@@ -1,7 +1,11 @@
 1.  INTRODUCTION
-a.  Purpose
+
+Purpose:
+
 The web-based meeting scheduler project serves the vital purpose of enhancing efficiency and communication in both professional and personal settings. By providing a user-friendly platform for scheduling and organizing meetings, it streamlines the cumbersome process of finding mutually convenient time slots for participants. This tool optimizes time management, minimizes scheduling conflicts, and fosters collaboration among team members, clients, and stakeholders. It promotes punctuality, improves productivity, and reduces the hassle associated with coordinating meetings across different time zones and schedules. In an increasingly globalized world, this project becomes indispensable, fostering seamless communication and empowering individuals and organizations to make the most out of their valuable time resources.
-b.  Scope
+
+Scope:
+
 Meeting Scheduling Automation: The primary objective of the project is to automate the meeting scheduling process. By using a user-friendly web interface, users can create and manage various types of meetings efficiently, reducing the need for manual coordination.
 Integration with Popular Platforms: The platform aims to integrate seamlessly with popular communication tools such as Google Meet, Microsoft Teams, and Zoom. This integration enables users to schedule meetings on their preferred platforms, enhancing accessibility and convenience.
 Real-Time Availability: The project intends to provide real-time availability updates to all participants. As participants respond with their availability, the system dynamically updates and displays the most up-to-date information, ensuring organizers have the latest scheduling data.
